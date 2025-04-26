@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <title>🍉 Watermelon Feta Salad - Tasty Summer Recipe</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom right, #fff8e1, #ffe0f0);
+      background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/180/original/background-5580056_1280.jpg?1745695806');
+      background-size: 400px 400px;
       color: #333;
     }
 
@@ -22,15 +24,35 @@
     header h1 {
       margin: 0;
       font-size: 2.5em;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .curve-divider {
+      height: 60px;
+      background: #ff6384;
+      border-bottom-left-radius: 50% 20px;
+      border-bottom-right-radius: 50% 20px;
     }
 
     .container {
       max-width: 800px;
       margin: 30px auto;
       padding: 20px;
-      background: white;
+      background: #fff4f8;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-img {
@@ -52,6 +74,19 @@
       content: "🍉 ";
     }
 
+    ul li {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    ul li:hover {
+      transform: scale(1.05);
+      background: #ffe5ec;
+    }
+
     button {
       background-color: #ff6384;
       color: white;
@@ -61,11 +96,12 @@
       font-size: 1em;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     button:hover {
       background-color: #e94a6b;
+      transform: scale(1.05);
     }
 
     footer {
@@ -73,6 +109,15 @@
       padding: 20px;
       font-size: 0.9em;
       color: #777;
+    }
+
+    footer a {
+      color: #ff6384;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -82,13 +127,15 @@
     <p>The ultimate refreshing summer recipe</p>
   </header>
 
+  <div class="curve-divider"></div>
+
   <div class="container">
     <img
-      src="
-      https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/179/original/watermelon-and-feta-salad-6126735_1280.jpg?1745695220"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/179/original/watermelon-and-feta-salad-6126735_1280.jpg?1745695220"
       alt="Watermelon Feta Salad"
       class="hero-img"
     />
+
     <h2>Why I Love This Recipe</h2>
     <p>
       Nothing says summer like a big bowl of watermelon feta salad. It’s quick,
@@ -98,28 +145,28 @@
 
     <h2>Ingredients</h2>
     <ul>
-      <li>4 cups cubed watermelon</li>
-      <li>1 cup crumbled feta cheese</li>
-      <li>1/4 cup fresh mint leaves</li>
-      <li>2 tbsp olive oil</li>
+      <li>4 cups cubed watermelon </li>
+      <li>1 cup crumbled feta cheese </li>
+      <li>1/4 cup fresh mint leaves </li>
+      <li>2 tbsp olive oil </li>
       <li>1 tbsp balsamic glaze (optional)</li>
-      <li>Salt and pepper to taste</li>
+      <li>Salt and pepper to taste </li>
     </ul>
 
     <h2>Instructions</h2>
     <p>
       Toss the watermelon cubes with crumbled feta and fresh mint in a large
       bowl. Drizzle with olive oil and balsamic glaze, then season lightly with
-      salt and pepper. Serve chilled and enjoy the summer vibes! ☀️
+      salt and pepper. Serve chilled and enjoy the summer vibes! ☀️🌈
     </p>
 
-    <button onclick="showAlert()">🍴 Try This Recipe Now!</button>
-  </div>
+    <button onclick="showAlert()">💡 Click to Reveal Summer Magic!</button>
 
-  <footer>
-    Created with 💛 by Elmari Robberts for the Tasty Summer Recipe Challenge 2025 open-sorced on 
-    <a href="">github</a>
-  </footer>
+    <footer>
+      Created with 💛 by Elmari Robberts for the Tasty Summer Recipe Challenge 2025 – open-sourced on
+      <a href="#" target="_blank">GitHub</a>
+    </footer>
+  </div>
 
   <script>
     function showAlert() {
